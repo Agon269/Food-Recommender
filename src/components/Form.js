@@ -16,7 +16,7 @@ export class Form extends React.Component {
     query: "",
     cuisine: "",
     diet: "",
-    intolerances: "Please input your intolerances seperated by coma",
+    intolerances: "",
     exclude: "",
     type: "",
   };
