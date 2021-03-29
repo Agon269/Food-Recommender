@@ -18,7 +18,11 @@ export class App extends React.Component {
       },
     });
 
-    this.setState({ foods: result.data.results });
+    if (result.data.results.length === 0) {
+      this.setState({ foods: false });
+    } else {
+      this.setState({ foods: result.data.results });
+    }
   };
   onFoodClick = (food) => {
     this.setState({ onFoodClick: food });

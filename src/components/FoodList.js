@@ -6,13 +6,21 @@ import Grid from "@material-ui/core/Grid";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 function FoodList({ foods, onFoodSelect }) {
-  const renderedFoods = foods.map((food, index) => {
-    return (
-      <Grid item key={food.id}>
-        <FoodItem theFood={food} onFoodSelect={onFoodSelect} />
-      </Grid>
-    );
-  });
+  let renderedFoods = "";
+  let message = "";
+  if (foods === false) {
+    message = "No recepie found";
+  } else {
+    message = "Bon Appétit !!!";
+    renderedFoods = foods.map((food, index) => {
+      return (
+        <Grid item key={food.id}>
+          <FoodItem theFood={food} onFoodSelect={onFoodSelect} />
+        </Grid>
+      );
+    });
+  }
+
   return (
     <div style={{ marginTop: "30px" }}>
       <Container>
@@ -23,7 +31,7 @@ function FoodList({ foods, onFoodSelect }) {
               className="MuiTypography-alignCenter"
               gutterBottom
             >
-              Bon Appetit!!!
+              {message}
             </Typography>
             <Grid
               container
