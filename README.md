@@ -9,7 +9,7 @@
 #### Front-end
 
 - [ReactJS](https://reactjs.org/) - Frontend framework
-- [Material-UI w/ lots of CSS customisations](https://material-ui.com/) - UI library
+- [Material-UI](https://material-ui.com/) - UI library
 
 #### Back-end
 
