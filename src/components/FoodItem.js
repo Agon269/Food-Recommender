@@ -59,7 +59,7 @@ export default function FoodItem(props) {
   });
   return (
     <Card
-      className={classes.root}
+      className={`${classes.root} card`}
       onClick={() => {
         onFoodSelect(food);
       }}

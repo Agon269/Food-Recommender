@@ -43,7 +43,7 @@ export class Form extends React.Component {
                 className="MuiTypography-alignCenter"
                 gutterBottom
               >
-                Find your food!!!
+                Find Your Recipe!!!
               </Typography>
               <form onSubmit={this.submitHandler}>
                 <Grid container spacing={3}>
